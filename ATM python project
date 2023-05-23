@@ -1,0 +1,46 @@
+print('********************************************************************************************')
+print('     welcome         to             SBI                ATM')
+print('********************************************************************************************')
+
+pin=1199
+
+balance=50000
+mpin=int(input("enter your card pin :"))
+if pin==mpin:
+        
+        print("welcome mr.jagdish nice to see you again")
+        print("choose option \n 1:cash withdraw \n 2:cash deposit \n 3:check balance \n 4:change pin \n 5: exit ")
+        option=int(input("choose options"))
+    
+        if option==1:
+            cash_withdraw=int(input("enter ammount"))
+            if cash_withdraw<=50000:
+                    balance=cash_withdraw-balance
+                    print('your balance',balance) 
+            else:
+                print("insufficient ammount ")
+                print("your balance is:",balance)
+ 
+        elif option==2:
+             deposit=int(input('deposit amount'))
+             balance=balance+deposit
+              
+        elif option==3:
+            check_balance=balance
+            print("available balance:",check_balance)
+            
+        elif option==4:
+            old_pin=int(input("enter your old pin"))
+            if old_pin==pin:
+                pin=int(input('enter your new pin'))
+                print('yor pin changed sucessfuly',pin)
+            else:
+                print(' you have entered wrong pin')
+                
+        elif option==5:
+                print("thank you mr.jagdish  for banking with us \n see you again ")
+                exit()
+else:
+    print("you have entered wrong pin \n try with another pin ")
+                
+                
